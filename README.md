@@ -10,6 +10,7 @@ A simple Layer2/3 tunnel created in D for educational purposes.
 * linux (archlinux)
 * MonoDevelop (5.9.5)
 * dmd compiler (v2.068)
+* tun driver (1.6)
 
 # usage
 
