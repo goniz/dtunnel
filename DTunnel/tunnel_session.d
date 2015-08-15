@@ -43,7 +43,6 @@ class TunnelSession {
 			
 			inputs.add(m_input.getSocket());
 			inputs.add(cast(socket_t)(m_dev.fileno()));
-			//TODO: find out why this select does not pop
 			auto ret = Socket.select(inputs, outputs, excepts, Duration.max);
 			writefln("select() = %d", ret);
 			if (0 > ret) {
@@ -67,5 +66,5 @@ class TunnelSession {
 	
 	private DatagramInputChannel 	m_input;
 	private DatagramOutputChannel 	m_output;
-	private TunTapDevice			m_dev;
+	private TunTapDevice		m_dev;
 }
